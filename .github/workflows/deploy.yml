@@ -21,7 +21,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive 
+          submodules: recursive
           fetch-depth: 0
 
       - name: Setup Hugo
@@ -34,7 +34,7 @@ jobs:
         run: hugo --gc --minify
 
       - name: Create CNAME file
-        run: echo "<yourCourseName>.cs12.ir" > public/CNAME # دامنه کورس
+        run: echo "cstd.cs12.ir" > public/CNAME # دامنه کورس
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
